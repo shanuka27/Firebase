@@ -3,10 +3,10 @@ import { collection, getDocs,getDoc,addDoc,updateDoc,deleteDoc,doc } from "fireb
 import { deleteApp } from "firebase/app";
 
 
-const foodCollection = collection(db,"Food")
+const foodCollection = collection(db,"Foods")
 
 class FoodDataServices {
-    addFood = (newFood) => {
+    addFoods = (newFood) => {
         return addDoc(foodCollection,newFood)
     }
 
@@ -20,7 +20,7 @@ class FoodDataServices {
         return deleteDoc(foodDoc)
     }
 
-    getAllFood = () => {
+    getAllFoods = () => {
         return getDocs(foodCollection)
     }
 
