@@ -1,9 +1,9 @@
 import {db} from "../firebase-config"
 import { collection, getDocs,getDoc,addDoc,updateDoc,deleteDoc,doc } from "firebase/firestore";
-import { deleteApp } from "firebase/app";
+// import { deleteApp } from "firebase/app";
 
 
-const foodCollection = collection(db,"Foods")
+const foodCollection = collection(db,"Food")
 
 class FoodDataServices {
     addFoods = (newFood) => {
@@ -11,12 +11,12 @@ class FoodDataServices {
     }
 
     updateFood = (id, updatedFood) => {
-        const foodDoc = doc(db,"Foods",id)
+        const foodDoc = doc(db,"foods",id)
         return updateDoc(foodDoc,updateDoc)
     }
 
     deleteFood = (id) => {
-        const foodDoc = doc(db,"Foods",id)
+        const foodDoc = doc(db,"foods",id)
         return deleteDoc(foodDoc)
     }
 
@@ -25,7 +25,7 @@ class FoodDataServices {
     }
 
     getFood = (id) => {
-        const foodDoc = doc(db,"Food",id)
+        const foodDoc = doc(db,"foods",id)
         return getDocs(foodDoc)
     }
 }

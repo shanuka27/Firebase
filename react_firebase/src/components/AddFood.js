@@ -2,6 +2,7 @@ import { useState, useEffect} from "react";
 import { Form, Alert, InputGroup, Button, ButtonGroup} from "react-bootstrap"
 import FoodDataService from "../services/food.services"
 
+
 const AddFood = (id, setFoodId) => {
     const [title, setTitle] = useState()
     const [price, setPrice] = useState()
@@ -76,21 +77,21 @@ const AddFood = (id, setFoodId) => {
         )}
 
         <Form onSubmit={handleSubmit}>
-          <Form.Group className="mb-3" controlId="formBookTitle">
+          <Form.Group className="mb-3" controlId="formFoodTitle">
             <InputGroup>
-              <InputGroup.Text id="formBookTitle">B</InputGroup.Text>
+              <InputGroup.Text id="formFoodTitle">B</InputGroup.Text>
               <Form.Control
                 type="text"
                 placeholder="Food Title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
               />
-            </InputGroup>
+            </InputGroup> 
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formBookAuthor">
+          <Form.Group className="mb-3" controlId="formFoodPrice">
             <InputGroup>
-              <InputGroup.Text id="formBookAuthor">A</InputGroup.Text>
+              <InputGroup.Text id="formFoodPrice">A</InputGroup.Text>
               <Form.Control
                 type="text"
                 placeholder="Price"

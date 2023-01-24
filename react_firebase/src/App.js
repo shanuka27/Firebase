@@ -1,9 +1,10 @@
-import logo from './logo.svg';
 import { useState } from 'react';
-import {Container, Navbar, Row, Col} from "react-bootstrap"
-import AddBook from "./components/AddFood"
+import { Container, Navbar, Row, Col} from "react-bootstrap"
+import AddFood from "./components/AddFood"
 import FoodList from "./components/FoodList"
 import './App.css';
+// import Container from 'react-bootstrap/Container';
+
 
 function App() {
   const [foodId, setFoodId] = useState("");
@@ -23,14 +24,14 @@ function App() {
     <Container style={{ width: "400px" }}>
       <Row>
         <Col>
-          <AddBook id={foodId} setFoodId={setBookId} />
+          <AddFood id={foodId} setFoodId={setFoodId} />
         </Col>
       </Row>
     </Container>
     <Container>
       <Row>
         <Col>
-          <BooksList getFoodId={getFoodIdHandler} />
+          <FoodList getFoodId={getFoodIdHandler} />
         </Col>
       </Row>
     </Container>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Table, Button } from "react-bootstrap";
-import FoodDataService from "../services/book.services";
+import FoodDataService from "../services/food.services";
 
 const FoodsList = ({ getFoodId }) => {
   const [foods, setFoods] = useState([]);
@@ -26,13 +26,13 @@ const FoodsList = ({ getFoodId }) => {
         </Button>
       </div>
 
-      {/* <pre>{JSON.stringify(books, undefined, 2)}</pre>} */}
+      {/* <pre>{JSON.stringify(foods, undefined, 2)}</pre> */}
       <Table striped bordered hover size="sm">
         <thead>
           <tr>
             <th>#</th>
-            <th>Book Title</th>
-            <th>Book Author</th>
+            <th>Food Title</th>
+            <th>Food Price</th>
             <th>Status</th>
             <th>Action</th>
           </tr>
